@@ -20,6 +20,6 @@ const contaAsHoras = setInterval(function(){
 
     if (distanciaAteOEvento < 0){
         clearInterval(contaAsHoras)
-        document.getElementById('timer').innerHTML = 'Evento expirado';
+        document.getElementById('timer').innerHTML = 'DOWNLOAD';
     }
 }, 1000);

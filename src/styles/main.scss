@@ -1,11 +1,23 @@
-@use 'header';
+@use 'nav';
+@use 'hero';
 @use 'variables';
+@use 'about';
+
+@mixin text($fontSize: 16px) {
+    font-size: $fontSize;
+}
+
+@mixin title($fontSize: 16px) {
+    font-size: $fontSize;
+}
+
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Roboto, sans-serif;
+    color: variables.$corTexto;
 }
 
 .container {
@@ -14,13 +26,49 @@
     margin: 0 auto;
 }
 
+.title {
+    @include title(32px)
+}
+
+
+.title--big {
+    @include title(48px)
+}
+
+.text--big {
+    @include text(32px)
+}
+
 .button {
     text-decoration: none;
-    color: #fff;
-    background-color: variables.$roxo;
+    background-color: variables.$button;
     padding: 8px;
     border-radius: 24px;
     letter-spacing: 4px;
     text-transform: uppercase;
     font-weight: bold;
 }
+
+.custom-shape {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    
+    svg {
+        position: relative;
+        display: block;
+        width: calc(138% + 1.3px);
+        height: 66px;
+        
+        .shape-fill {
+            fill: #FFFFFF;
+        }
+    }
+}
+
+
+

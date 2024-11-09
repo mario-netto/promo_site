@@ -20,6 +20,8 @@ const contaAsHoras = setInterval(function(){
 
     if (distanciaAteOEvento < 0){
         clearInterval(contaAsHoras)
-        document.getElementById('timer').innerHTML = 'DOWNLOAD';
+        document.getElementById('title-hero').innerHTML = '<b>UMSÓ</b> App'
+        document.getElementById('timer').classList.add('hero__content__text__time--padding-0');
+        document.getElementById('timer').innerHTML = '<a class="button" href="$">DOWNLOAD</a>';
     }
 }, 1000);

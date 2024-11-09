@@ -63,7 +63,31 @@
                     width: 100%;
                 }
             }
-            }
+        }
+    }
 
+    @media (max-width: 1023px) {
+        .hero{
+            &__content {
+                display: block;
+                text-align: center;
+
+                &__text {
+                    h1 {
+                        font-size: 32px;
+                        margin-top: 32px;
+                    }
+
+                    &__time {
+                        font-size: 24px;
+                    }
+                }
+                
+                &__image {
+                    max-width: 260px;
+                    width: 100%;
+                }
+            }
+        }
     }
 }

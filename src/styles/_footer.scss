@@ -1,0 +1,9 @@
+@use 'variables';
+
+.footer {
+    &__item {
+        background-color: variables.$fundoPreto;
+        text-align: center;
+        padding: 8px 0;
+    }
+}

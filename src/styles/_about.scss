@@ -1,0 +1,35 @@
+@use 'variables';
+
+.about {
+    background-color: variables.$fundoBranco;
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        &__text {
+            margin: 0 24px;
+            
+            .title {
+                color: variables.$corTextoPreto;
+                text-transform: uppercase;
+                margin-bottom: 32px;
+                padding-left: 16px;
+                font-weight: 700;
+                border-left: 4px solid variables.$borda;
+
+                span {
+                    color: variables.$corTextoPreto;
+                    font-weight: 400;
+                }
+            }
+            .text {
+                color: variables.$corTextoPreto;
+            }
+        }
+        &__image {
+            max-width: 360px;
+            margin-right: 8px;
+        }
+    }
+}

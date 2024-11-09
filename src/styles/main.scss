@@ -2,6 +2,7 @@
 @use 'hero';
 @use 'variables';
 @use 'about';
+@use 'footer';
 
 @mixin text($fontSize: 16px) {
     font-size: $fontSize;
@@ -27,16 +28,24 @@
 }
 
 .title {
-    @include title(32px)
+    @include title(32px);
 }
 
-
 .title--big {
-    @include title(48px)
+    @include title(48px);
+}
+
+.text {
+    @include text();
+    line-height: 32px;
 }
 
 .text--big {
     @include text(32px)
+}
+
+.text--small {
+    @include text(14px)
 }
 
 .button {
@@ -65,7 +74,7 @@
         height: 66px;
         
         .shape-fill {
-            fill: #FFFFFF;
+            fill: variables.$fundoBranco;
         }
     }
 }
